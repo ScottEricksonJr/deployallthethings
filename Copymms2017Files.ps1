@@ -20,7 +20,7 @@
  { 
  $uri = $Date 
  
- $login = Invoke-WebRequest -Uri 'https://mms2017.sched.com/login' -SessionVariable $mms 
+ $login = Invoke-WebRequest -Uri 'https://mms2017.sched.com/login' -SessionVariable mms 
  $form = $login.forms | where method -eq post
  $form.fields["username"] = $username
  $form.fields["password"] = $password
